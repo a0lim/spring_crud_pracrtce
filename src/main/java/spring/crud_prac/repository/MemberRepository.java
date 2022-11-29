@@ -1,9 +1,11 @@
 package spring.crud_prac.repository;// DB member 리스트 가져옴(crate에도 형태 변환 없음)
 
+import org.springframework.stereotype.Repository;
 import spring.crud_prac.entity.Member;
 
 import java.util.*;
 
+@Repository
 public class MemberRepository implements PracRepository {
 
     public static Map<Long, Member> store = new HashMap<>(); // Map에 데이터를 저장함
@@ -37,7 +39,7 @@ public class MemberRepository implements PracRepository {
 //package spring.crud_prac.repository;
 //
 //public interface MemberRepository {
-//    @Query("select m from memberwhere m.id = :id")
+//    @Query("select m from member where m.id = :id")
 //    Optional<> findById(@Param("id") Long Id);
 //
 //}

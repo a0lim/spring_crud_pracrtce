@@ -1,5 +1,6 @@
 package spring.crud_prac.service;
 
+import org.springframework.stereotype.Service;
 import spring.crud_prac.entity.Member;
 import spring.crud_prac.repository.MemberRepository;
 import spring.crud_prac.repository.PracRepository;
@@ -7,6 +8,7 @@ import spring.crud_prac.repository.PracRepository;
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class MemberService {
 
     private final PracRepository pracRepository = new MemberRepository();
