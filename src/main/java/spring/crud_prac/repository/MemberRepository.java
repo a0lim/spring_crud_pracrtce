@@ -4,7 +4,7 @@ import spring.crud_prac.entity.Member;
 
 import java.util.*;
 
-public abstract class MemberRepository implements PracRepository {
+public class MemberRepository implements PracRepository {
 
     public static Map<Long, Member> store = new HashMap<>(); // Map에 데이터를 저장함
     public static long sequence = 0L;
