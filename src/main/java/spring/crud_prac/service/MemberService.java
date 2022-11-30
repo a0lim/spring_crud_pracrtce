@@ -34,4 +34,8 @@ public class MemberService {
     public Optional<Member> findOne(Long memberId){
         return pracRepository.findById(memberId);
     }
+
+    // UPDATE: 회원 수정
+
+    // DELETE: 회원 삭제
 }

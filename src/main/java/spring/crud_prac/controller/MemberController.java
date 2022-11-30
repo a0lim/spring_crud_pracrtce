@@ -28,7 +28,7 @@ public class MemberController {
         return "/members/create"; // members.cteate html로 연결해서 보여줌
     }
 
-    @PostMapping("/create/new") // http 주소
+    @PostMapping("/create") // http 주소
     public String createResponse(CreateController createController){
         Member member = new Member();
         member.setName(createController.getName()); // setName: Member entity / getName: CreateController
@@ -45,4 +45,15 @@ public class MemberController {
         model.addAttribute("members", members); // "key", "value
         return "members/read";
     }
+
+
+    // UPDATE
+
+//    @GetMapping("/update")
+//    @PostMapping("/update")
+
+    // DELETE
+
+//    @GetMapping("/delete")
+//    @PostMapping("/delete")
 }
