@@ -24,9 +24,9 @@ public class MemberRepository implements PracRepository {
     }
 
     @Override
-    public Optional<Member> findByName(String member_name){
+    public Optional<Member> findByName(String name){
         return store.values().stream()
-                .filter(member -> member.getName().equals(member_name))
+                .filter(member -> member.getName().equals(name))
                 .findAny();
     }
 
