@@ -1,0 +1,21 @@
+<!--update와 delete를 한 창에서 함께 수행함 - 입력 창 1개, 버튼 2개
+(read 페이지에서 같이 보여주면서 read.html과 합치기) -->
+
+<!DOCTYPE HTML>
+<html xmlns:th = "http://www.thymeleaf.org">
+<body>
+
+<div class="container">
+
+  <form action="/read/update" method="post"> <!-- form: 값 입력하는 창 / post: post 방식으로 불러옴 -> MemberController에서 @PostMapping으로 연결 -->
+    <div class="form-group">
+      <label for="name">이름</label>
+      <input type="text" id="name" name="name" placeholder="이름을 입력하세요"> <!-- type: text를 적을 칸이 생성됨 -->
+    </div>
+    <button type="submit">수정</button>
+    <button type="submit">삭제</button>
+  </form>
+</div> <!-- /container -->
+
+</body>
+</html>
