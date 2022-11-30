@@ -1,4 +1,4 @@
-//package spring.crud_prac.dto;
+package spring.crud_prac.dto;
 //
 //import io.swagger.annotations.ApiModelProperty;
 //import lombok.AllArgsConstructor;
@@ -11,7 +11,7 @@
 //@NoArgsConstructor
 //@AllArgsConstructor
 //
-//public class requestDto {
+public class requestDto {
 //    @ApiModelProperty(value = "") // swagger
 //    private String Id;
-//}
+}
