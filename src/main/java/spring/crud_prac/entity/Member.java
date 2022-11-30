@@ -6,7 +6,7 @@ import com.sun.javafx.beans.IDProperty;
 public class Member {
 
     private Long id;
-    private String member_name;
+    private String name;
 
     public Long getId(){
         return id;
@@ -17,8 +17,12 @@ public class Member {
     }
 
     public String getName(){
-        return member_name;
+        return name;
     }
+    public void setName(String name){
+        this.name = name;
+    }
+
 }
 
 
