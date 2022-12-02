@@ -1,11 +1,20 @@
 package spring.crud_prac.entity;
 
 import com.sun.istack.internal.NotNull;
-import com.sun.javafx.beans.IDProperty;
 
+import javax.persistence.*;
+
+@Entity
 public class Member {
 
+    @Id
+    @NotNull
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // DB에서 자동으로 생성함
+    @Column(name = "id", unique = true)
     private Long id;
+
+    @NotNull
+    @Column(name = "name")
     private String name;
 
     public Long getId(){
@@ -24,19 +33,3 @@ public class Member {
     }
 
 }
-
-
-
-//@Entity
-//
-//public class Member {
-//    @ID
-//    @NotNull
-//    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "member_seq")
-//    @Column(name = "id", unique = True)
-//    private Long Id;
-//
-//    @NotNull
-//    @Column(name = "member_name")
-//    private String member_name;
-//}
