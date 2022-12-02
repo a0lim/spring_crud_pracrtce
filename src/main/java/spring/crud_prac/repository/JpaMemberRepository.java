@@ -6,11 +6,11 @@ import javax.persistence.EntityManager;
 import java.util.List;
 import java.util.Optional;
 
-public class JpaRepository<M, L extends Number> implements MemberInterfaceRepository {
+public class JpaMemberRepository<M, L extends Number> implements MemberInterfaceRepository {
 
     private final EntityManager em; // Raw JPA: EntityManager를 주입받아 사용
 
-    public JpaRepository(EntityManager em){
+    public JpaMemberRepository(EntityManager em){
         this.em = em;
     }
 
