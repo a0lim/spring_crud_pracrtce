@@ -6,7 +6,7 @@ import spring.crud_prac.entity.Member;
 import java.util.*;
 
 @Repository
-public class MemberRepository implements CrudRepository {
+public class MemberRepository implements MemberInterfaceRepository {
 
     public static Map<Long, Member> store = new HashMap<>(); // Map에 데이터를 저장함
     public static long sequence = 0L;

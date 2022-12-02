@@ -6,7 +6,7 @@ import javax.persistence.EntityManager;
 import java.util.List;
 import java.util.Optional;
 
-public class JpaRepository<M, L extends Number> implements CrudRepository {
+public class JpaRepository<M, L extends Number> implements MemberInterfaceRepository {
 
     private final EntityManager em; // Raw JPA: EntityManager를 주입받아 사용
 
