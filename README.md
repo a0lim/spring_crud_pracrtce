@@ -25,9 +25,9 @@ home(/)
   - repository
     + MemberRepository: DB 연결 필요
       * save(Member member), findById(Long Id), findByName(String name), findAll()
-    + CrudRepository: interface 
-    + JpaRepository
-    + SpringDataJpaRepository
+    + MemberInterfaceRepository 
+    + JpaMemberRepository
+    + SpringDataMemberJpaRepository
   - service
     + MemberService: CURD 구현
       * join(Member member), validateDuplicateMember(Member member)
