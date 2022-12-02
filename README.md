@@ -19,18 +19,24 @@ home(/)
     + (requestDto)
     + (responseDto)
   - entity
-    + Member: 필드 값 정의: DB 연결 필요
+    + Member: 필드 값 정의: DB 연결 완료
       * id, name 정의
       * getId(), setId(Long Id), getName(), setName(String name)
   - repository
     + MemberRepository: DB 연결 필요
       * save(Member member), findById(Long Id), findByName(String name), findAll()
+    + CrudRepository: interface 
+    + JpaRepository
+    + SpringDataJpaRepository
   - service
     + MemberService: CURD 구현
       * join(Member member), validateDuplicateMember(Member member)
   - CrudPracApplication
   - resources/templates
-    + members
-      create.html
+    + members  
+      create.html  
+      read.html  
+      updateAndDelete.html  
     + home.html
+  - application properties
   
