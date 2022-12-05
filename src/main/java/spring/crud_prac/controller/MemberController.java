@@ -4,7 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import spring.crud_prac.dto.requestDto;
 import spring.crud_prac.entity.Member;
 import spring.crud_prac.service.MemberService;
 
@@ -29,14 +32,15 @@ public class MemberController {
     }
 
     @PostMapping("/create") // http 주소
-    public String createResponse(CreateController createController){
+    public String createResponse(String name){
         Member member = new Member();
-        member.setName(createController.getName()); // setName: Member entity / getName: CreateController
+        member.setName(name); // setName: Member entity / getName: CreateController
 
         memberService.join(member); // join: MemberService
 
         return "redirect:/"; // 서비스 이후 홈 화면으로 이동
     }
+
 
     // READ
     @GetMapping("/read")

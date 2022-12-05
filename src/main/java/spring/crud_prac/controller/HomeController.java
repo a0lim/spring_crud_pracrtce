@@ -11,8 +11,4 @@ public class HomeController {
         return "home";
     }
 
-    // id, name
-//    @PostMapping("/read")
-//    public List<>
-
 }

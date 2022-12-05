@@ -1,10 +1,18 @@
 package spring.crud_prac.entity;
 
 import com.sun.istack.internal.NotNull;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
 
 @Entity
+@NoArgsConstructor
+@Getter
+@DynamicInsert
+@DynamicUpdate
 public class Member {
 
     @Id
@@ -17,17 +25,6 @@ public class Member {
     @Column(name = "name")
     private String name;
 
-    public Long getId(){
-        return id;
-    }
-
-    public void setId(Long id){
-        this.id = id;
-    }
-
-    public String getName(){
-        return name;
-    }
     public void setName(String name){
         this.name = name;
     }
