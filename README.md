@@ -40,3 +40,5 @@ home(/)
     + home.html
   - application properties
   
+* h2 db
+-  jdbc:h2:tcp://localhost/~/aylim/DeskTop/study/git_local/crud_prac
